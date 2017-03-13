@@ -1,0 +1,8 @@
+﻿@model TrainingASP.Models.UserViewModel
+
+@using (Html.BeginForm("Create", "Users", FormMethod.Post))
+{
+    @Html.TextBoxFor(m => m.UserName)
+
+    <input type="submit" value="Submit" />
+}

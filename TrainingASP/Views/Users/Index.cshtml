@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TrainingASP.Models.UserViewModel>
+
+<table id="cTable" class="table table-striped">
+    <thead>
+    <tr>
+        <th style="text-align: center">UserId</th>
+        <th style="text-align: center">UserName</th>
+    </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.UserId)</td>
+            <td>@Html.DisplayFor(model => item.UserName)</td>
+            <td>
+                @*<a>@Url.Action("Delete", "Users", new { userId = item.UserId })</a>*@
+                <a onclick = "return confirm('Do you want to Delete?')" href = "@Url.Action("Delete","Users",new {id = item.UserId})">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Create new user", "Create", "Users", new { @class = "btn btn-primary btn-large" })

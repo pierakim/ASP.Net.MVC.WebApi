@@ -1,0 +1,16 @@
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Services.dll.config
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Services.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Services.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\EntityFramework.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Data.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Models.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Services.Interfaces.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Data.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Models.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\TrainingASP.Services.Interfaces.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\EntityFramework.xml
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\obj\Debug\TrainingASP.Services.csprojResolveAssemblyReference.cache
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\obj\Debug\TrainingASP.Services.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services\obj\Debug\TrainingASP.Services.pdb
