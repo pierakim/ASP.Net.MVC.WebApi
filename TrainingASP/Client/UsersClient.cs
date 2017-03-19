@@ -11,7 +11,7 @@ namespace TrainingASP.Client
 {
     public class UsersClient
     {
-        private string Base_URL = "http://localhost:31375/api/";
+        private const string BaseUrl = "http://localhost:31375/api/";
 
         public IEnumerable<UserViewModel> GetAllUsers()
         {
@@ -19,8 +19,7 @@ namespace TrainingASP.Client
             {
                 var usersList = new List<UserViewModel>();
 
-                var client = new HttpClient();
-                client.BaseAddress = new Uri(Base_URL);
+                var client = new HttpClient {BaseAddress = new Uri(BaseUrl)};
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("UsersApi").Result;
 
@@ -50,14 +49,13 @@ namespace TrainingASP.Client
         {
             try
             {
-                var client = new HttpClient { BaseAddress = new Uri(Base_URL) };
+                var client = new HttpClient {BaseAddress = new Uri(BaseUrl)};
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.PostAsJsonAsync("UsersApi", user).Result;
                 return response.IsSuccessStatusCode;
             }
             catch (Exception)
             {
-
                 return false;
             }
         }
@@ -66,15 +64,55 @@ namespace TrainingASP.Client
         {
             try
             {
-                var client = new HttpClient { BaseAddress = new Uri(Base_URL) };
+                var client = new HttpClient {BaseAddress = new Uri(BaseUrl)};
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                //var response = client.DeleteAsync("UsersApi/"+userId).Result;
-                var response = client.DeleteAsync(string.Format("UsersApi/{0}",userId)).Result;
+                var response = client.DeleteAsync($"UsersApi/{userId}").Result;
                 return response.IsSuccessStatusCode;
             }
             catch (Exception)
             {
+                return false;
+            }
+        }
 
+        public UserViewModel Get(int userId)
+        {
+            try
+            {
+                var client = new HttpClient { BaseAddress = new Uri(BaseUrl) };
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync($"UsersApi/{userId}").Result;
+
+                var uvm = new UserViewModel();
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseJson = response.Content.ReadAsStringAsync().Result;
+                    dynamic results = JsonConvert.DeserializeObject<dynamic>(responseJson);
+                    uvm.UserId = results.UserId;
+                    uvm.UserName = results.UserName.ToString();
+                }
+                return uvm;
+
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public bool Edit(UserViewModel user)
+        {
+            try
+            {
+                var client = new HttpClient {BaseAddress = new Uri(BaseUrl)};
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                //var response = client.PutAsJsonAsync(string.Format("UsersApi/{0}",user.UserId), user).Result;
+                var response = client.PutAsJsonAsync("UsersApi/" + user.UserId, user).Result;
+
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
                 return false;
             }
         }

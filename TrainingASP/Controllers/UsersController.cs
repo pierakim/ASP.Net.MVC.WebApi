@@ -41,5 +41,21 @@ namespace TrainingASP.Controllers
             new UsersClient().Delete(id);
             return RedirectToAction("Index", "Users");
         }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var user = new UsersClient().Get(id);
+
+            return View(user);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(UserViewModel user)
+        {
+            new UsersClient().Edit(user);
+
+            return RedirectToAction("Index", "Users");
+        }
     }
 }

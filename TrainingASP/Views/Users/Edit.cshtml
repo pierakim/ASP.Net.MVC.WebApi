@@ -1,0 +1,9 @@
+﻿@model TrainingASP.Models.UserViewModel
+
+@using (Html.BeginForm("Edit", "Users", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.UserId)
+    @Html.TextBoxFor(m => m.UserName)
+
+    <input type="submit" value="Submit" />
+}
