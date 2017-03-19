@@ -8,10 +8,14 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using AutoMapper;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
 using SimpleInjector.Integration.WebApi;
+using TrainingASP.Automapper;
+using TrainingASP.Data;
+using TrainingASP.Models;
 using TrainingASP.Services;
 using TrainingASP.Services.Interfaces;
 
@@ -32,11 +36,15 @@ namespace TrainingASP
             //**************
             var container = new Container();
             container.Options.DefaultScopedLifestyle = new WebApiRequestLifestyle();
+            
             //Registration
-            container.Register<IUsersService, UsersService>(Lifestyle.Scoped);
-
-            // This is an extension method from the integration package.
+            container.Register<IUsersService, UsersService>(Lifestyle.Scoped); 
             container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
+
+            //Automapper registeration
+            var config = new AutoMapperConfiguration().Configure();
+            container.RegisterSingleton<MapperConfiguration>(config);
+            container.Register<IMapper>(() => config.CreateMapper(container.GetInstance), Lifestyle.Scoped);
 
             container.Verify();
 
