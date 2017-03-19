@@ -7,3 +7,12 @@ C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\Train
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Data\obj\Debug\TrainingASP.Data.dll
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Data\obj\Debug\TrainingASP.Data.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\bin\Debug\TrainingASP.Data.dll.config
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\bin\Debug\TrainingASP.Data.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\bin\Debug\TrainingASP.Data.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\bin\Debug\EntityFramework.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\bin\Debug\EntityFramework.xml
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\obj\Debug\TrainingASP.Data.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Data\obj\Debug\TrainingASP.Data.pdb

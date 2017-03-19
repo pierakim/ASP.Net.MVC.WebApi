@@ -2,3 +2,7 @@ C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\Train
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Models\bin\Debug\TrainingASP.Models.pdb
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Models\obj\Debug\TrainingASP.Models.dll
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Models\obj\Debug\TrainingASP.Models.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Models\bin\Debug\TrainingASP.Models.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Models\bin\Debug\TrainingASP.Models.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Models\obj\Debug\TrainingASP.Models.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Models\obj\Debug\TrainingASP.Models.pdb

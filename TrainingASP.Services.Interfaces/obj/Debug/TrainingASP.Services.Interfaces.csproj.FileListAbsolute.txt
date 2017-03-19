@@ -5,3 +5,10 @@ C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\Train
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services.Interfaces\obj\Debug\TrainingASP.Services.Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services.Interfaces\obj\Debug\TrainingASP.Services.Interfaces.dll
 C:\Users\Chicken\Documents\Visual Studio 2015\Projects\TrainingASP - Copie\TrainingASP.Services.Interfaces\obj\Debug\TrainingASP.Services.Interfaces.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Services.Interfaces\bin\Debug\TrainingASP.Services.Interfaces.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Services.Interfaces\bin\Debug\TrainingASP.Services.Interfaces.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Services.Interfaces\bin\Debug\TrainingASP.Models.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Services.Interfaces\bin\Debug\TrainingASP.Models.pdb
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Services.Interfaces\obj\Debug\TrainingASP.Services.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Services.Interfaces\obj\Debug\TrainingASP.Services.Interfaces.dll
+C:\Users\Chicken\Documents\Visual Studio 2015\Projects\ASP.Net.MVC.WebApi\ASP.Net.MVC.WebApi\TrainingASP.Services.Interfaces\obj\Debug\TrainingASP.Services.Interfaces.pdb
