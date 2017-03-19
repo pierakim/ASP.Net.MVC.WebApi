@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.InteropServices;
+using AutoMapper;
 using TrainingASP.Data;
 using TrainingASP.Services.Interfaces;
 using TrainingASP.Models;
@@ -10,27 +12,30 @@ namespace TrainingASP.Services
 {
     public class UsersService : IUsersService
     {
+
+        private readonly IMapper _mapper;
+        public UsersService(IMapper mapper)
+        {
+            this._mapper = mapper;
+        }
+
         public UserViewModel GetUser(int userId)
         {
             try
             {
                 using (var context = new TrainingDbEntities())
                 {
-                    var user = context.UsersTbls.Find(userId);
-                    if (user == null)
+                    var userRes = context.UsersTbls.Find(userId);
+                    if (userRes == null)
                         return null;
-                    var u = new UserViewModel
-                    {
-                        UserId = user.UserId,
-                        UserName = user.UserName
-                    };
-                    return u;
+
+                    var user = _mapper.Map<UserViewModel>(userRes);
+                    return user;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                throw;
+                throw new ApplicationException("Error in UserService/GetUser:", ex);
             }
         }
 
@@ -38,22 +43,22 @@ namespace TrainingASP.Services
         {
             try
             {
-                List<UserViewModel> usersList;
-
+                List<UsersTbl> list;
                 using (var context = new TrainingDbEntities())
                 {
-                    usersList = (from u in context.UsersTbls
-                        select new UserViewModel
-                        {
-                            UserId = u.UserId,
-                            UserName = u.UserName
-                        }).ToList();
+                    list = context.UsersTbls.ToList();
                 }
-                return usersList;
+                if (list.Any())
+                {
+                    var usersList = _mapper.Map<IEnumerable<UserViewModel>>(list).ToList();
+
+                    return usersList;
+                }
+                return null;
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Error in UserService/GetUsersList():", ex);
+                throw new ApplicationException("Error in UserService/GetUsersList:", ex);
             }
         }
 
@@ -61,28 +66,23 @@ namespace TrainingASP.Services
         {
             try
             {
-                var newUser = new UsersTbl();
                 using (var context = new TrainingDbEntities())
                 {
                     var p = context.UsersTbls.OrderByDescending(c => c.UserId).FirstOrDefault();
                     var newId = (p?.UserId ?? 0) + 1;
-
+                    //apply new id
                     user.UserId = newId;
 
-                    newUser.UserId = newId;
-                    newUser.UserName = user.UserName;
-
-                    context.UsersTbls.Add(newUser);
+                    var newUUser = _mapper.Map<UsersTbl>(user);
+                    context.UsersTbls.Add(newUUser);
                     context.SaveChanges();
                 }
                 return user;
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Error in UserService/PostNewUser:", ex);
+                throw new ApplicationException("Error in UserService/Create:", ex);
             }
-
-
         }
 
         public UserViewModel Delete(int userId)
@@ -97,12 +97,8 @@ namespace TrainingASP.Services
                     context.UsersTbls.Remove(userToDelete);
                     context.SaveChanges();
 
-                    var u = new UserViewModel
-                    {
-                        UserId = userToDelete.UserId,
-                        UserName = userToDelete.UserName
-                    };
-                    return u;
+                    var user = _mapper.Map<UserViewModel>(userToDelete);
+                    return user;
                 }
             }
             catch (Exception ex)
@@ -122,11 +118,7 @@ namespace TrainingASP.Services
                 }
                 using (var context = new TrainingDbEntities())
                 {
-                    var userTb = new UsersTbl
-                    {
-                        UserId = user.UserId,
-                        UserName = user.UserName
-                    };
+                    var userTb = _mapper.Map<UsersTbl>(user);
 
                     context.Entry(userTb).State = EntityState.Modified;
                     try
@@ -135,7 +127,7 @@ namespace TrainingASP.Services
                     }
                     catch (Exception ex)
                     {
-                        return false;
+                        throw new ApplicationException("Error in UserService/Edit - SaveChanges Operation:", ex);
                     }
                     return true;
                 }
