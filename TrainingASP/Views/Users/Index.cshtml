@@ -16,6 +16,7 @@
             <td>
                 @*<a>@Url.Action("Delete", "Users", new { userId = item.UserId })</a>*@
                 <a onclick = "return confirm('Do you want to Delete?')" href = "@Url.Action("Delete","Users",new {id = item.UserId})">Delete</a>
+                <a href="@Url.Action("Edit","Users",new {id = item.UserId})">Edit</a>
             </td>
         </tr>
     }

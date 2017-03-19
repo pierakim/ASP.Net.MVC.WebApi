@@ -24,22 +24,59 @@ namespace TrainingASP.Controllers.Api
             return _service.GetUsersList();
         }
 
+        // GET: api/Users/5  
+        public IHttpActionResult Get(int id)
+        {
+            var user = _service.GetUser(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
+        }
+
         // POST: api/users
         [HttpPost]
         public IHttpActionResult Create(UserViewModel user)
         {
-            _service.Create(user);
+            if (!ModelState.IsValid || user == null)
+            {
+                return BadRequest(ModelState);
+            }
 
-            return Ok();
+            var res = _service.Create(user);
+
+            return CreatedAtRoute("DefaultApi", new {id = res.UserId}, res);
         }
 
         // DELETE: api/users/5 
         [HttpDelete] 
         public IHttpActionResult Delete(int id)
         {
-            _service.Delete(id);
+            var user = _service.Delete(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
+        }
 
-            return Ok();
+        // PUT: api/users/5 
+        [HttpPut]
+        public IHttpActionResult Edit(int id, UserViewModel user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var res = _service.Edit(id, user);
+            if (!res)
+            {
+                return BadRequest();
+            }
+
+            return StatusCode(HttpStatusCode.NoContent);
         }
     }
 }

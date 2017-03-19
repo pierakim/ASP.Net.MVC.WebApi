@@ -7,8 +7,12 @@ namespace TrainingASP.Services.Interfaces
     {
         List<UserViewModel> GetUsersList();
 
+        UserViewModel GetUser(int userId);
+
         UserViewModel Create(UserViewModel user);
 
-        bool Delete(int userId);
+        UserViewModel Delete(int userId);
+
+        bool Edit(int userId, UserViewModel user);
     }
 }
